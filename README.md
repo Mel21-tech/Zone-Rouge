@@ -20,11 +20,15 @@ Jeu en monde ouvert style GTA, en 3D dans le navigateur (Three.js). Il tourne su
 | Nitro | N | NITRO |
 | Zoom caméra | C | — |
 | Carte | M | — |
+| Carabine de chasse / appeau | K / L | — |
+| Zoom lunette / retenir son souffle | molette ou + et − / Shift | ZOOM / SOUFFLE |
 | Menu | P ou Échap | — |
 
 ## Contenu
 
 - Grande ville avec quartiers, plage, îles, montagnes, rocade et autoroutes
+- Campagne autour de la ville : village des Granges, hameau, deux fermes (vaches, champs, silo), station-service du Col
+- Chasse dans les montagnes : cerfs, biches, sangliers, renards et ours avec vue, ouïe et odorat (vent), carabine à lunette ×4 à ×12, balistique, appeau, pavillon de chasse et tableau de chasse
 - Missions d'histoire, braquages (approche furtive ou bourrin), guerres de gangs
 - Voitures, motos, bateaux, hélicoptères, avions et parachute
 - Drift avec score et combos, courses de rue, Neon Karting (kart ou moto), démolition derby
@@ -45,4 +49,4 @@ Jeu en monde ouvert style GTA, en 3D dans le navigateur (Three.js). Il tourne su
 - Tout le jeu tient dans un seul fichier `index.html` (code, textures et modèles intégrés).
 - Bibliothèques chargées depuis un CDN : Three.js r128 (avec post-traitement et GLTFLoader) et Cannon.js 0.6.2 pour la physique.
 - Les sauvegardes utilisent le `localStorage` du navigateur. Elles restent sur l'appareil et ne sont pas partagées entre deux navigateurs.
-- Le mode multijoueur a besoin d'un serveur WebSocket séparé. Sans serveur, il ne fonctionne pas, mais tout le reste du jeu marche normalement.
+- Multijoueur (jusqu'à 4 joueurs) : l'hôte crée une partie et reçoit un code de 5 caractères, ses potes le tapent pour rejoindre. La mise en relation passe par le service gratuit PeerJS, puis les appareils se parlent directement (WebRTC). Si ce service est inaccessible, le jeu propose un mode « codes longs » qui marche sans aucun service.
